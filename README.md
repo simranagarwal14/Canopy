@@ -24,7 +24,7 @@ An empathetic, AI-driven full-stack web application that transforms routine hous
   - ✂️ **Prune & Restart:** Resets growth state to *Sprout/Seedling* with a clean health record.
   - ♻️️ **Convert to Compost:** Recycles the wilted plant into a *Compost Shield* (1-day streak-freeze safeguard).
 
-- **🤖 Rootly AI Botanical Assistant**
+- **🤖 Groot AI Botanical Assistant**
   A conversational AI chatbot powered by LangChain and OpenAI, automatically injected with your specific garden parameters and historical care logs for personalized troubleshooting.
 
 - **🔍 4-Tab Plant Profile Inspector**
