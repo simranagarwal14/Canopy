@@ -1,7 +1,3 @@
-# Canopy
-🌿 Canopy — An empathetic, full-stack digital garden app blending virtual pet mechanics, real-world plant diagnostics, and context-aware AI support (Rootly). Built with Next.js 14, TypeScript, Tailwind, Supabase, Prisma, Rive &amp; LangChain.
-
-
 # 🌿 Canopy — Personalized Digital Garden Companion
 
 An empathetic, AI-driven full-stack web application that transforms routine houseplant care into an engaging digital experience by merging virtual pet dynamics, real-world plant diagnostics, and a context-aware botanical AI assistant.
