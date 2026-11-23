@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "notes": "Starter plant knowledge for Canopy. Replace or extend the 'plants' array with your own data — keep the same field names. Only 'name' is required; any field you leave out is treated as 'not in the plant file yet' by Rootly.",
+  "plants": [
+    {
+      "name": "Cactus",
+      "aliases": ["cacti", "opuntia", "prickly pear", "succulent cactus"],
+      "scientificName": "Cactaceae (e.g. Opuntia, Echinopsis)",
+      "wateringIntervalDays": 14,
+      "wateringNotes": "Soak thoroughly, then let the soil dry out completely before watering again. Water roughly every 2 weeks in the growing season; cut back to once a month in winter and keep water off the plant during heavy monsoon humidity to avoid rot.",
+      "sunlightAdjustIntervalDays": 7,
+      "sunlightHoursPerDay": "6+ hours of direct sun",
+      "sunlightRule": "Needs bright, direct sun. Rotate or reposition the pot weekly so all sides get even light, and give light shade during peak afternoon sun in extreme heat to prevent sunburn.",
+      "fertilizerIntervalDays": 60,
+      "fertilizerNotes": "Feed with a diluted low-nitrogen cactus fertilizer or a thin top-dressing of well-rotted compost every ~2 months in the growing season. No feeding in winter.",
+      "lightNotes": "Full sun is ideal; a south or west-facing balcony or terrace works well.",
+      "humidityNotes": "Thrives in dry air (roughly 20–50% RH). Poor air circulation in very humid weather invites fungal rot.",
+      "soilNotes": "Use a gritty, fast-draining mix (sandy soil + perlite or coarse sand + a little compost). Slightly alkaline to neutral pH is fine. Always use a pot with drainage holes.",
+      "careTips": [
+        "Overwatering is the most common way to lose a cactus — when in doubt, wait.",
+        "Use gloves or folded newspaper when repotting.",
+        "Wrinkled, soft stems usually mean thirst; mushy, dark stems mean rot."
+      ]
+    },
+    {
+      "name": "Neem",
+      "aliases": ["azadirachta", "azadirachta indica", "margosa", "neem tree", "nimbu tree"],
+      "scientificName": "Azadirachta indica",
+      "wateringIntervalDays": 5,
+      "wateringNotes": "Water young plants deeply every 4–6 days. Established neem is drought tolerant and needs far less; avoid waterlogging.",
+      "sunlightAdjustIntervalDays": 14,
+      "sunlightHoursPerDay": "6+ hours of direct sun",
+      "sunlightRule": "Full sun. Keep it where it gets at least 6 hours of direct light and rotate the container every couple of weeks for even growth.",
+      "fertilizerIntervalDays": 45,
+      "fertilizerNotes": "Apply well-rotted compost, vermicompost or neem cake roughly every 6 weeks during the growing season.",
+      "lightNotes": "Loves hot, bright conditions; weak and leggy in low light.",
+      "humidityNotes": "Tolerates a very wide range from arid to humid, though it grows fastest in warm, moderately humid weather.",
+      "soilNotes": "Well-drained sandy loam. Tolerates poor and slightly alkaline soils but hates standing water.",
+      "careTips": [
+        "Prune lightly to shape and keep a potted neem to a manageable size.",
+        "Protect young saplings from frost.",
+        "Leaves can be used to make a mild homemade pest spray for other plants."
+      ]
+    },
+    {
+      "name": "Rose",
+      "aliases": ["roses", "gulab", "rosa", "rose bush"],
+      "scientificName": "Rosa spp.",
+      "wateringIntervalDays": 2,
+      "wateringNotes": "Water deeply at the base every 2 days (daily in peak summer, less in winter). Avoid wetting the leaves — it encourages black spot.",
+      "sunlightAdjustIntervalDays": 7,
+      "sunlightHoursPerDay": "5–6 hours, ideally morning sun",
+      "sunlightRule": "Give at least 5–6 hours of sun, preferably morning light. Reposition or rotate weekly and provide afternoon shade in the hottest months.",
+      "fertilizerIntervalDays": 20,
+      "fertilizerNotes": "Feed every 2–3 weeks while growing and flowering with vermicompost, well-rotted manure, or a balanced NPK fertilizer; add bone meal to support blooms.",
+      "lightNotes": "Flowers poorly in shade. Good morning sun with some afternoon relief is the sweet spot.",
+      "humidityNotes": "Prefers moderate humidity (around 50–70% RH) with good air flow; very humid, still air promotes fungal disease.",
+      "soilNotes": "Rich, loamy, organic soil with good drainage; slightly acidic to neutral (pH about 6.0–6.8).",
+      "careTips": [
+        "Deadhead spent blooms to encourage more flowers.",
+        "Prune dead or crossing stems after the main flowering flush.",
+        "Mulch the soil surface to keep roots cool and moist."
+      ]
+    },
+    {
+      "name": "Tomato",
+      "aliases": ["tomatoes", "tamatar", "solanum lycopersicum", "cherry tomato"],
+      "scientificName": "Solanum lycopersicum",
+      "wateringIntervalDays": 1,
+      "wateringNotes": "Keep soil evenly moist — water deeply every day in hot weather (every 2 days in cool weather). Irregular watering can cause blossom-end rot and split fruit.",
+      "sunlightAdjustIntervalDays": 5,
+      "sunlightHoursPerDay": "6–8 hours of direct sun",
+      "sunlightRule": "Needs 6–8 hours of direct sun. Rotate the pot every few days so all sides ripen evenly, and give light afternoon shade only during extreme heat waves.",
+      "fertilizerIntervalDays": 14,
+      "fertilizerNotes": "Heavy feeder: add compost or vermicompost every 2 weeks, switching to a potash-rich feed once flowers and fruit set.",
+      "lightNotes": "Fruiting drops sharply with under ~6 hours of sun.",
+      "humidityNotes": "Does best around 50–70% RH. Very high humidity increases blight and fungal problems.",
+      "soilNotes": "Rich, loamy, well-drained soil with plenty of organic matter; pH around 6.0–6.8.",
+      "careTips": [
+        "Stake or cage plants early.",
+        "Pinch off side shoots (suckers) on indeterminate varieties.",
+        "Water at the soil level, not on the leaves."
+      ]
+    },
+    {
+      "name": "Tulsi",
+      "aliases": ["holy basil", "tulasi", "ocimum", "ocimum tenuiflorum", "sacred basil"],
+      "scientificName": "Ocimum tenuiflorum",
+      "wateringIntervalDays": 2,
+      "wateringNotes": "Water every 2 days; daily in peak summer and every 3–4 days in winter. Keep the soil moist but never waterlogged.",
+      "sunlightAdjustIntervalDays": 7,
+      "sunlightHoursPerDay": "4–6 hours of sun",
+      "sunlightRule": "Place in 4–6 hours of bright sun, ideally morning sun. Reposition weekly so it doesn't lean toward the light, and provide light shade in intense afternoon heat.",
+      "fertilizerIntervalDays": 30,
+      "fertilizerNotes": "Mix in vermicompost or well-rotted cow-dung manure roughly once a month. Avoid strong chemical fertilizers.",
+      "lightNotes": "Grows leggy and weak in low light.",
+      "humidityNotes": "Tolerates a wide humidity range (about 40–80% RH). Sensitive to cold below roughly 10°C.",
+      "soilNotes": "Loose, well-drained loamy soil rich in organic matter; pH about 6.0–7.5.",
+      "careTips": [
+        "Pinch off flower buds (manjari) to keep the plant bushy and leafy.",
+        "Harvest by pinching leaves just above a pair of leaves.",
+        "Protect from frost and cold drafts in winter."
+      ]
+    }
+  ]
+}

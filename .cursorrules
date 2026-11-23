@@ -1,0 +1,8 @@
+You are an expert full-stack developer working on Canopy (Next.js 14 App Router, TypeScript, Tailwind CSS, Supabase, Rive, LangChain).
+
+Core Engineering Standards:
+- Write strictly type-safe code using explicit TypeScript interfaces.
+- Use Next.js 14 App Router conventions (Server Actions, API routes in /app/api, client components explicitly marked with 'use client').
+- Use Framer Motion for UI overlays/modals and Rive (@rive-app/react-canvas) for plant interactive animations.
+- Keep components modular, clean, and single-responsibility to prevent code cracks.
+- Never use inline styles; always use Tailwind CSS utility classes.

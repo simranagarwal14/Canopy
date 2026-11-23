@@ -1,0 +1,53 @@
+// Prisma 7: the connection URL lives in prisma.config.ts (CLI) and
+// src/lib/prisma.ts (runtime, via the pg driver adapter) — not in this file.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String
+  createdAt DateTime @default(now())
+  garden    Garden?
+}
+
+model Garden {
+  id        String  @id @default(uuid())
+  userId    String  @unique
+  user      User    @relation(fields: [userId], references: [id])
+  humidity  String
+  sunlight  String
+  soiltype  String
+  placement String
+  plants    Plant[]
+}
+
+model Plant {
+  id             String    @id @default(uuid())
+  gardenId       String
+  garden         Garden    @relation(fields: [gardenId], references: [id])
+  name           String
+  species        String
+  growthStage    String // Seed, Sprout, Mature, Grafted
+  healthState    String    @default("happy") // dancing, happy, sad, browning, dead
+  createdAt      DateTime  @default(now()) // planting date: the clock starts here until a task is first logged
+  lastWatered    DateTime?
+  lastSunMoved   DateTime?
+  lastFertilized DateTime?
+  logs           CareLog[]
+}
+
+model CareLog {
+  id        String   @id @default(uuid())
+  plantId   String
+  plant     Plant    @relation(fields: [plantId], references: [id], onDelete: Cascade)
+  taskType  String // water, sunlight, soil
+  completed Boolean  @default(true)
+  timestamp DateTime @default(now())
+}

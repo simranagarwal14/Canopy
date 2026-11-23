@@ -1,0 +1,223 @@
+@import "tailwindcss";
+
+/* ───────────── Canopy theme: storybook pond / plant-shop ───────────── */
+:root {
+  --parchment: #f6f1e3; /* page background */
+  --surface: #fffdf7; /* card surface */
+  --forest: #163625; /* sidebar */
+  --ink: #16291e; /* text */
+  --moss: #2d6a4f; /* primary accent */
+  --leaf: #529471; /* secondary accent */
+  --lotus: #e28f83; /* lotus coral accent */
+  --inkline: #1e3a29; /* hand-inked borders + offset shadows */
+  --pond: #8ec9e6; /* pond sky-blue accent */
+  --sand: #d9b77e; /* sandy wood */
+  --sand-soft: #efe0be;
+  --muted: #55695c;
+  --danger: #a93b28;
+}
+
+@theme inline {
+  --color-parchment: var(--parchment);
+  --color-surface: var(--surface);
+  --color-forest: var(--forest);
+  --color-ink: var(--ink);
+  --color-moss: var(--moss);
+  --color-leaf: var(--leaf);
+  --color-lotus: var(--lotus);
+  --color-inkline: var(--inkline);
+  --color-pond: var(--pond);
+  --color-sand: var(--sand);
+  --color-sand-soft: var(--sand-soft);
+  --color-muted: var(--muted);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+}
+
+html {
+  background: var(--parchment);
+}
+
+body {
+  background-color: var(--parchment);
+  /* subtle hand-drawn zig-zag wallpaper */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='24'%3E%3Cpath d='M0 12 L12 2 L24 12 L36 2 L48 12' fill='none' stroke='%23ebe0c4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+:focus-visible {
+  outline: 3px solid var(--pond);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@layer components {
+  /* parchment card with a hand-inked border and offset shadow */
+  .card {
+    background: var(--surface);
+    border: 2px solid var(--inkline);
+    border-radius: 20px;
+    box-shadow: 4px 4px 0 var(--inkline);
+  }
+  .card-flat {
+    background: var(--surface);
+    border: 2px solid var(--inkline);
+    border-radius: 16px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    border: 2px solid var(--inkline);
+    border-radius: 14px;
+    padding: 0.7rem 1.15rem;
+    box-shadow: 3px 3px 0 var(--inkline);
+    cursor: pointer;
+    transition:
+      transform 0.12s ease,
+      box-shadow 0.12s ease;
+  }
+  .btn:hover:not(:disabled) {
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 var(--inkline);
+  }
+  .btn:active:not(:disabled) {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 var(--inkline);
+  }
+  .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  .btn-primary {
+    background: var(--moss);
+    color: #fffdf7;
+  }
+  .btn-lotus {
+    background: var(--lotus);
+    color: var(--ink);
+  }
+  .btn-ghost {
+    background: var(--surface);
+    color: var(--ink);
+  }
+
+  .field {
+    width: 100%;
+    background: #fffdf7;
+    border: 2px solid var(--inkline);
+    border-radius: 12px;
+    padding: 0.65rem 0.85rem;
+    color: var(--ink);
+    font-size: 1rem;
+  }
+  .field::placeholder {
+    color: #7d8d82;
+  }
+  .field:focus-visible {
+    outline: 3px solid var(--pond);
+    outline-offset: 2px;
+  }
+  .label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    border: 2px solid var(--inkline);
+    border-radius: 999px;
+    padding: 0.3rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: var(--surface);
+  }
+
+  /* striped shop awning with scalloped edge */
+  .awning {
+    position: relative;
+    height: 44px;
+    background: repeating-linear-gradient(90deg, var(--moss) 0 40px, var(--sand-soft) 40px 80px);
+    border-bottom: 2px solid var(--inkline);
+  }
+  .awning::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin-top: 2px;
+    height: 20px;
+    background: repeating-linear-gradient(90deg, var(--moss) 0 40px, var(--sand-soft) 40px 80px);
+    -webkit-mask: radial-gradient(circle 20px at 20px 0, #000 97%, transparent 100%) 0 0 / 40px 20px repeat-x;
+    mask: radial-gradient(circle 20px at 20px 0, #000 97%, transparent 100%) 0 0 / 40px 20px repeat-x;
+  }
+
+  /* hand-inked checkbox for care tasks */
+  .tick {
+    appearance: none;
+    -webkit-appearance: none;
+    display: inline-grid;
+    place-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    flex-shrink: 0;
+    border: 2px solid var(--inkline);
+    border-radius: 9px;
+    background: var(--surface);
+    box-shadow: 2px 2px 0 var(--inkline);
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+  .tick:hover:not(:disabled):not(:checked) {
+    background: var(--sand-soft);
+  }
+  .tick:checked {
+    background: var(--moss)
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fffdf7' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E")
+      center / 80% no-repeat;
+  }
+  .tick:disabled {
+    cursor: not-allowed;
+  }
+  .tick:disabled:not(:checked) {
+    opacity: 0.45;
+    box-shadow: none;
+  }
+
+  /* wooden shelf plank under plants */
+  .plank {
+    background: linear-gradient(var(--sand), #c9a468);
+    border-top: 2px solid var(--inkline);
+    border-bottom: 2px solid var(--inkline);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
